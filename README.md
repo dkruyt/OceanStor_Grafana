@@ -7,7 +7,8 @@ Dependencies InfluxDB as the time-series database Telegraf as the collector
 ### Quick Start
 
 * Enable SNMP on your Huawei OceanStor storage
-* Put hw_stor.conf in your telegraf.d directory
+* Put hw_stor.conf in your `/etc/telegraf/telegraf.d` directory
+* Put the files in the mibs dir `/usr/share/snmp/mibs`
 * Edit the community string as appropriate
 * Edit the SNMP verion as appropriate
 * Edit the 'agents' list to include all of your monitored OceanStor storages

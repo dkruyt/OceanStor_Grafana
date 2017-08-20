@@ -28,7 +28,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "4.3.2"
+      "version": "4.4.1"
     },
     {
       "type": "panel",
@@ -87,7 +87,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "hideControls": true,
+  "hideControls": false,
   "id": null,
   "links": [],
   "refresh": "1m",
@@ -1932,7 +1932,7 @@
       "titleSize": "h6"
     },
     {
-      "collapse": false,
+      "collapse": true,
       "height": 413,
       "panels": [
         {
@@ -2332,7 +2332,7 @@
       "titleSize": "h6"
     },
     {
-      "collapse": false,
+      "collapse": true,
       "height": 248,
       "panels": [
         {
@@ -2800,7 +2800,7 @@
       "titleSize": "h6"
     },
     {
-      "collapse": false,
+      "collapse": true,
       "height": 236,
       "panels": [
         {
@@ -3182,7 +3182,7 @@
       "titleSize": "h6"
     },
     {
-      "collapse": false,
+      "collapse": true,
       "height": 319,
       "panels": [
         {
@@ -3193,7 +3193,7 @@
           "datasource": "${DS_TELEGRAF}",
           "editable": true,
           "error": false,
-          "fill": 2,
+          "fill": 0,
           "height": "450",
           "id": 32,
           "legend": {
@@ -3246,6 +3246,7 @@
                 }
               ],
               "measurement": "hw_luns",
+              "orderByTime": "ASC",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -3263,7 +3264,7 @@
                   },
                   {
                     "params": [
-                      "3"
+                      "5"
                     ],
                     "type": "moving_average"
                   }
@@ -3323,7 +3324,7 @@
           "datasource": "${DS_TELEGRAF}",
           "editable": true,
           "error": false,
-          "fill": 2,
+          "fill": 0,
           "height": "450",
           "id": 31,
           "legend": {
@@ -3370,6 +3371,7 @@
                 }
               ],
               "measurement": "hw_luns",
+              "orderByTime": "ASC",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -3387,7 +3389,7 @@
                   },
                   {
                     "params": [
-                      "3"
+                      "5"
                     ],
                     "type": "moving_average"
                   }
@@ -3447,7 +3449,7 @@
           "datasource": "${DS_TELEGRAF}",
           "editable": true,
           "error": false,
-          "fill": 2,
+          "fill": 0,
           "height": "450",
           "id": 18,
           "legend": {
@@ -3498,6 +3500,7 @@
                 }
               ],
               "measurement": "hw_luns",
+              "orderByTime": "ASC",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -3515,7 +3518,7 @@
                   },
                   {
                     "params": [
-                      "3"
+                      "5"
                     ],
                     "type": "moving_average"
                   }
@@ -3575,7 +3578,7 @@
           "datasource": "${DS_TELEGRAF}",
           "editable": true,
           "error": false,
-          "fill": 2,
+          "fill": 0,
           "height": "450",
           "id": 14,
           "legend": {
@@ -3626,6 +3629,7 @@
                 }
               ],
               "measurement": "hw_luns",
+              "orderByTime": "ASC",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -3640,6 +3644,12 @@
                   {
                     "params": [],
                     "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "5"
+                    ],
+                    "type": "moving_average"
                   }
                 ]
               ],
@@ -3698,7 +3708,7 @@
       "titleSize": "h6"
     },
     {
-      "collapse": false,
+      "collapse": true,
       "height": 250,
       "panels": [
         {
@@ -3902,14 +3912,12 @@
       "titleSize": "h6"
     },
     {
-      "collapse": false,
+      "collapse": true,
       "height": 290,
       "panels": [
         {
           "aliasColors": {},
           "bars": false,
-          "dashLength": 10,
-          "dashes": false,
           "datasource": "${DS_TELEGRAF}",
           "editable": true,
           "error": false,
@@ -3935,7 +3943,6 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "spaceLength": 10,
           "span": 12,
           "stack": false,
           "steppedLine": false,
@@ -4008,7 +4015,6 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
             "name": null,
             "show": true,
@@ -4036,8 +4042,6 @@
         {
           "aliasColors": {},
           "bars": false,
-          "dashLength": 10,
-          "dashes": false,
           "datasource": "${DS_TELEGRAF}",
           "editable": true,
           "error": false,
@@ -4062,7 +4066,6 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "spaceLength": 10,
           "span": 6,
           "stack": false,
           "steppedLine": false,
@@ -4276,7 +4279,6 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
             "name": null,
             "show": true,
@@ -4304,8 +4306,6 @@
         {
           "aliasColors": {},
           "bars": false,
-          "dashLength": 10,
-          "dashes": false,
           "datasource": "${DS_TELEGRAF}",
           "editable": true,
           "error": false,
@@ -4330,7 +4330,6 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "spaceLength": 10,
           "span": 6,
           "stack": false,
           "steppedLine": false,
@@ -4446,7 +4445,6 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
             "name": null,
             "show": true,
@@ -4480,14 +4478,12 @@
       "titleSize": "h6"
     },
     {
-      "collapse": false,
+      "collapse": true,
       "height": 514,
       "panels": [
         {
           "aliasColors": {},
           "bars": false,
-          "dashLength": 10,
-          "dashes": false,
           "datasource": "${DS_TELEGRAF}",
           "editable": true,
           "error": false,
@@ -4512,7 +4508,6 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "spaceLength": 10,
           "span": 6,
           "stack": false,
           "steppedLine": false,
@@ -4585,7 +4580,6 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
             "name": null,
             "show": true,
@@ -4613,8 +4607,6 @@
         {
           "aliasColors": {},
           "bars": false,
-          "dashLength": 10,
-          "dashes": false,
           "datasource": "${DS_TELEGRAF}",
           "editable": true,
           "error": false,
@@ -4639,7 +4631,6 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "spaceLength": 10,
           "span": 6,
           "stack": false,
           "steppedLine": false,
@@ -4712,7 +4703,6 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
             "name": null,
             "show": true,
@@ -4740,8 +4730,6 @@
         {
           "aliasColors": {},
           "bars": false,
-          "dashLength": 10,
-          "dashes": false,
           "datasource": "${DS_TELEGRAF}",
           "editable": true,
           "error": false,
@@ -4766,7 +4754,6 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "spaceLength": 10,
           "span": 6,
           "stack": false,
           "steppedLine": false,
@@ -4839,7 +4826,6 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
             "name": null,
             "show": true,
@@ -4870,8 +4856,6 @@
             "Controller 1": "#65C5DB"
           },
           "bars": false,
-          "dashLength": 10,
-          "dashes": false,
           "datasource": "${DS_TELEGRAF}",
           "editable": true,
           "error": false,
@@ -4896,7 +4880,6 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "spaceLength": 10,
           "span": 6,
           "stack": false,
           "steppedLine": false,
@@ -4969,7 +4952,6 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
             "name": null,
             "show": true,
@@ -5003,129 +4985,9 @@
       "titleSize": "h6"
     },
     {
-      "collapse": false,
-      "height": 301,
+      "collapse": true,
+      "height": 326,
       "panels": [
-        {
-          "aliasColors": {
-            "Tier 0 SSD": "#E24D42",
-            "Tier 1 SAS": "#EAB839",
-            "Tier 2 NL-SAS": "#1F78C1"
-          },
-          "cacheTimeout": null,
-          "combine": {
-            "label": "Others",
-            "threshold": 0
-          },
-          "datasource": "${DS_TELEGRAF}",
-          "fontSize": "80%",
-          "format": "decmbytes",
-          "height": "",
-          "id": 46,
-          "interval": null,
-          "legend": {
-            "percentage": true,
-            "show": true,
-            "values": true
-          },
-          "legendType": "On graph",
-          "links": [],
-          "maxDataPoints": 3,
-          "nullPointMode": "connected",
-          "pieType": "pie",
-          "span": 3,
-          "strokeWidth": 1,
-          "targets": [
-            {
-              "alias": "$col",
-              "dsType": "influxdb",
-              "groupBy": [
-                {
-                  "params": [
-                    "$interval"
-                  ],
-                  "type": "time"
-                },
-                {
-                  "params": [
-                    "null"
-                  ],
-                  "type": "fill"
-                }
-              ],
-              "measurement": "hw_storagepool",
-              "policy": "default",
-              "refId": "A",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "PoolTier0Capacity"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [],
-                    "type": "mean"
-                  },
-                  {
-                    "params": [
-                      "Tier 0 SSD"
-                    ],
-                    "type": "alias"
-                  }
-                ],
-                [
-                  {
-                    "params": [
-                      "PoolTier1Capacity"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [],
-                    "type": "mean"
-                  },
-                  {
-                    "params": [
-                      "Tier 1 SAS"
-                    ],
-                    "type": "alias"
-                  }
-                ],
-                [
-                  {
-                    "params": [
-                      "PoolTier2Capacity"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [],
-                    "type": "mean"
-                  },
-                  {
-                    "params": [
-                      "Tier 2 NL-SAS"
-                    ],
-                    "type": "alias"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "agent_host",
-                  "operator": "=~",
-                  "value": "/^$storage$/"
-                }
-              ]
-            }
-          ],
-          "title": "Smart Tier Distribution",
-          "type": "grafana-piechart-panel",
-          "valueName": "current"
-        },
         {
           "aliasColors": {
             "Duration": "#BA43A9",
@@ -5175,12 +5037,12 @@
             }
           ],
           "spaceLength": 10,
-          "span": 4,
+          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "alias": "$col $tag_StoragePoolName",
+              "alias": "$col $tag_Name",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -5191,12 +5053,13 @@
                 },
                 {
                   "params": [
-                    "StoragePoolName"
+                    "Name"
                   ],
                   "type": "tag"
                 }
               ],
               "measurement": "hw_storagepool",
+              "orderByTime": "ASC",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -5343,7 +5206,7 @@
             }
           ],
           "spaceLength": 10,
-          "span": 5,
+          "span": 6,
           "stack": true,
           "steppedLine": false,
           "targets": [
@@ -5371,6 +5234,7 @@
                 }
               ],
               "measurement": "hw_storagetier",
+              "orderByTime": "ASC",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -5466,7 +5330,7 @@
       "titleSize": "h6"
     },
     {
-      "collapse": false,
+      "collapse": true,
       "height": 250,
       "panels": [
         {
@@ -5847,7 +5711,7 @@
       "titleSize": "h6"
     },
     {
-      "collapse": false,
+      "collapse": true,
       "height": 392,
       "panels": [
         {
@@ -6099,7 +5963,7 @@
       "titleSize": "h6"
     },
     {
-      "collapse": false,
+      "collapse": true,
       "height": 250,
       "panels": [
         {
@@ -6601,6 +6465,1296 @@
       "showTitle": true,
       "title": "Ports",
       "titleSize": "h6"
+    },
+    {
+      "collapse": true,
+      "height": 307,
+      "panels": [
+        {
+          "aliasColors": {
+            "Available thumper_asd6": "#7EB26D",
+            "Available thumper_asd8": "#7EB26D",
+            "Capacity thumper_asd6": "#890F02",
+            "Capacity thumper_asd8": "#890F02"
+          },
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_TELEGRAF}",
+          "decimals": 2,
+          "fill": 0,
+          "id": 70,
+          "interval": ">60s",
+          "legend": {
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "/Available/",
+              "fill": 2
+            }
+          ],
+          "spaceLength": 10,
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "$col $tag_Name",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "Name"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "hw_infofilesys",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "B",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Capacity"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "Capacity"
+                    ],
+                    "type": "alias"
+                  }
+                ],
+                [
+                  {
+                    "params": [
+                      "AvailableCapacity"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "Available"
+                    ],
+                    "type": "alias"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "agent_host",
+                  "operator": "=~",
+                  "value": "/^$storage$/"
+                }
+              ]
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Filesytem Capacity",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "mbytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "ratio thumper_asd6": "#705DA0"
+          },
+          "bars": true,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_TELEGRAF}",
+          "fill": 1,
+          "id": 78,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": false,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "$col $tag_Name",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "Name"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "hw_infofilesys",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "CompressSavedRatio"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "ratio"
+                    ],
+                    "type": "alias"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "agent_host",
+                  "operator": "=~",
+                  "value": "/^$storage$/"
+                }
+              ]
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "FileSystem Compress Saved Ratio",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_TELEGRAF}",
+          "fill": 0,
+          "id": 73,
+          "interval": ">60s",
+          "legend": {
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "$col Filesystem ID:$tag_ID",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "ID"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "hw_perffilesystem",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "AvRdOPSRspTime"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "5"
+                    ],
+                    "type": "moving_average"
+                  },
+                  {
+                    "params": [
+                      "Read IO Response"
+                    ],
+                    "type": "alias"
+                  }
+                ],
+                [
+                  {
+                    "params": [
+                      "AvWrOPSRspTime"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "5"
+                    ],
+                    "type": "moving_average"
+                  },
+                  {
+                    "params": [
+                      "Write IO Response"
+                    ],
+                    "type": "alias"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "agent_host",
+                  "operator": "=~",
+                  "value": "/^$storage$/"
+                }
+              ]
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "FileSystem IO Response",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "µs",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_TELEGRAF}",
+          "fill": 0,
+          "id": 75,
+          "interval": ">60s",
+          "legend": {
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "$col Filesystem ID:$tag_ID",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "ID"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "hw_perffilesystem",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "ReadBandwidth"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "5"
+                    ],
+                    "type": "moving_average"
+                  },
+                  {
+                    "params": [
+                      "Read"
+                    ],
+                    "type": "alias"
+                  }
+                ],
+                [
+                  {
+                    "params": [
+                      "WriteBandwidth"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "5"
+                    ],
+                    "type": "moving_average"
+                  },
+                  {
+                    "params": [
+                      "Write"
+                    ],
+                    "type": "alias"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "agent_host",
+                  "operator": "=~",
+                  "value": "/^$storage$/"
+                }
+              ]
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "FileSystem Bandwith",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "MBs",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": true,
+      "title": "FileSystem",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": true,
+      "height": 319,
+      "panels": [
+        {
+          "aliasColors": {
+            "Tier 0 SSD": "#E24D42",
+            "Tier 1 SAS": "#EAB839",
+            "Tier 2 NL-SAS": "#1F78C1"
+          },
+          "cacheTimeout": null,
+          "combine": {
+            "label": "Others",
+            "threshold": 0
+          },
+          "datasource": "${DS_TELEGRAF}",
+          "fontSize": "80%",
+          "format": "decmbytes",
+          "height": "",
+          "id": 46,
+          "interval": null,
+          "legend": {
+            "percentage": true,
+            "show": true,
+            "values": true
+          },
+          "legendType": "On graph",
+          "links": [],
+          "maxDataPoints": 3,
+          "minSpan": 2,
+          "nullPointMode": "connected",
+          "pieType": "pie",
+          "repeat": "storagepool",
+          "span": 6,
+          "strokeWidth": 1,
+          "targets": [
+            {
+              "alias": "$col",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "$interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "hw_storagepool",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Tier0Capacity"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "Tier 0 SSD"
+                    ],
+                    "type": "alias"
+                  }
+                ],
+                [
+                  {
+                    "params": [
+                      "Tier1Capacity"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "Tier 1 SAS"
+                    ],
+                    "type": "alias"
+                  }
+                ],
+                [
+                  {
+                    "params": [
+                      "Tier2Capacity"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "Tier 2 NL-SAS"
+                    ],
+                    "type": "alias"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "agent_host",
+                  "operator": "=~",
+                  "value": "/^$storage$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "Name",
+                  "operator": "=~",
+                  "value": "/^$storagepool$/"
+                }
+              ]
+            }
+          ],
+          "title": "Pool Distribution $storagepool",
+          "transparent": false,
+          "type": "grafana-piechart-panel",
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_TELEGRAF}",
+          "decimals": 2,
+          "fill": 0,
+          "id": 72,
+          "interval": ">60s",
+          "legend": {
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "$col $tag_Name",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "Name"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "hw_storagepool",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "B",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "FreeCapacity"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "Free"
+                    ],
+                    "type": "alias"
+                  }
+                ],
+                [
+                  {
+                    "params": [
+                      "TotalCapacity"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "Total"
+                    ],
+                    "type": "alias"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "agent_host",
+                  "operator": "=~",
+                  "value": "/^$storage$/"
+                }
+              ]
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Storage Pool Capacity",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "mbytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": true,
+      "title": "Storage Pool",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": true,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {
+            "NFS V3 Controller:0A": "#447EBC"
+          },
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_TELEGRAF}",
+          "fill": 0,
+          "id": 74,
+          "interval": ">60s",
+          "legend": {
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "$col Controller:$tag_NFSV3ID",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "NFSV3ID"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "hw_perfnfscontroller",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "NFSV3OPS"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "5"
+                    ],
+                    "type": "moving_average"
+                  },
+                  {
+                    "params": [
+                      "NFS V3"
+                    ],
+                    "type": "alias"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "agent_host",
+                  "operator": "=~",
+                  "value": "/^$storage$/"
+                }
+              ]
+            },
+            {
+              "alias": "$col Controller:$tag_NFSV4ID",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "NFSV4ID"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "hw_perfnfscontroller",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "B",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "NFSV4OPS"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "5"
+                    ],
+                    "type": "moving_average"
+                  },
+                  {
+                    "params": [
+                      "NFS V4"
+                    ],
+                    "type": "alias"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "agent_host",
+                  "operator": "=~",
+                  "value": "/^$storage$/"
+                }
+              ]
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "NFS Operations",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "ops",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {
+            "NFS V3 Controller:0A": "#447EBC"
+          },
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "${DS_TELEGRAF}",
+          "fill": 0,
+          "id": 76,
+          "interval": ">60s",
+          "legend": {
+            "avg": false,
+            "current": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "$col Controller:$tag_NFSV3ID",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "NFSV3ID"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "hw_perfnfscontroller",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "NFSV3Bps"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "5"
+                    ],
+                    "type": "moving_average"
+                  },
+                  {
+                    "params": [
+                      "NFS V3"
+                    ],
+                    "type": "alias"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "agent_host",
+                  "operator": "=~",
+                  "value": "/^$storage$/"
+                }
+              ]
+            },
+            {
+              "alias": "$col Controller:$tag_NFSV4ID",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "NFSV4ID"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "hw_perfnfscontroller",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "B",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "NFSV4Bps"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "5"
+                    ],
+                    "type": "moving_average"
+                  },
+                  {
+                    "params": [
+                      "NFS V4"
+                    ],
+                    "type": "alias"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "agent_host",
+                  "operator": "=~",
+                  "value": "/^$storage$/"
+                }
+              ]
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "NFS Bps",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "Bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": true,
+      "title": "NFS",
+      "titleSize": "h6"
     }
   ],
   "schemaVersion": 14,
@@ -6622,6 +7776,26 @@
         "name": "storage",
         "options": [],
         "query": "SHOW TAG VALUES FROM \"hw_storage\" WITH KEY = \"agent_host\"",
+        "refresh": 1,
+        "regex": "",
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {},
+        "datasource": "${DS_TELEGRAF}",
+        "hide": 2,
+        "includeAll": true,
+        "label": null,
+        "multi": false,
+        "name": "storagepool",
+        "options": [],
+        "query": "SHOW TAG VALUES FROM \"hw_storagepool\" WITH KEY = \"Name\" WHERE \"agent_host\" =~ /^$storage/",
         "refresh": 1,
         "regex": "",
         "sort": 0,
@@ -6664,5 +7838,5 @@
   },
   "timezone": "browser",
   "title": "Huawei Storage",
-  "version": 54
+  "version": 65
 }

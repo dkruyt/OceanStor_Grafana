@@ -847,6 +847,352 @@
 			DESCRIPTION
 				"Description."
 			::= { hwPerfCacheEntry 5 }
+
+		hwPerfControllerNFSV3Table OBJECT-TYPE
+			SYNTAX SEQUENCE OF HwPerfControllerNFSV3Entry
+			MAX-ACCESS not-accessible
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerformance 10 }
+
+
+		hwPerfControllerNFSV3Entry OBJECT-TYPE
+			SYNTAX HwPerfControllerNFSV3Entry
+			MAX-ACCESS not-accessible
+			STATUS current
+			DESCRIPTION
+				"Description."
+			INDEX { hwPerfControllerNFSV3ID }
+			::= { hwPerfControllerNFSV3Table 1 }
+
+
+		HwPerfControllerNFSV3Entry ::=
+			SEQUENCE {
+				hwPerfControllerNFSV3ID
+					OCTET STRING,
+				hwPerfControllerNFSV3OPS
+					Counter64,
+				hwPerfControllerNFSV3Bps
+					Counter64
+			 }
+
+		hwPerfControllerNFSV3ID OBJECT-TYPE
+			SYNTAX OCTET STRING
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfControllerNFSV3Entry 1 }
+
+
+		hwPerfControllerNFSV3OPS OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfControllerNFSV3Entry 2 }
+
+
+		hwPerfControllerNFSV3Bps OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfControllerNFSV3Entry 3 }
+
+
+		hwPerfControllerNFSV4Table OBJECT-TYPE
+			SYNTAX SEQUENCE OF HwPerfControllerNFSV4Entry
+			MAX-ACCESS not-accessible
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerformance 11 }
+
+
+		hwPerfControllerNFSV4Entry OBJECT-TYPE
+			SYNTAX HwPerfControllerNFSV4Entry
+			MAX-ACCESS not-accessible
+			STATUS current
+			DESCRIPTION
+				"Description."
+			INDEX { hwPerfControllerNFSV4ID }
+			::= { hwPerfControllerNFSV4Table 1 }
+
+
+		HwPerfControllerNFSV4Entry ::=
+			SEQUENCE {
+				hwPerfControllerNFSV4ID
+					OCTET STRING,
+				hwPerfControllerNFSV4OPS
+					Counter64,
+				hwPerfControllerNFSV4Bps
+					Counter64
+			 }
+
+		hwPerfControllerNFSV4ID OBJECT-TYPE
+			SYNTAX OCTET STRING
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfControllerNFSV4Entry 1 }
+
+
+		hwPerfControllerNFSV4OPS OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfControllerNFSV4Entry 2 }
+
+
+		hwPerfControllerNFSV4Bps OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfControllerNFSV4Entry 3 }
+
+
+		hwPerfControllerSMBV1Table OBJECT-TYPE
+			SYNTAX SEQUENCE OF HwPerfControllerSMBV1Entry
+			MAX-ACCESS not-accessible
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerformance 12 }
+
+
+		hwPerfControllerSMBV1Entry OBJECT-TYPE
+			SYNTAX HwPerfControllerSMBV1Entry
+			MAX-ACCESS not-accessible
+			STATUS current
+			DESCRIPTION
+				"Description."
+			INDEX { hwPerfControllerSMBV1ID }
+			::= { hwPerfControllerSMBV1Table 1 }
+
+
+		HwPerfControllerSMBV1Entry ::=
+			SEQUENCE {
+				hwPerfControllerSMBV1ID
+					OCTET STRING,
+				hwPerfControllerSMBV1OPS
+					Counter64,
+				hwPerfControllerSMBV1Bps
+					Counter64
+			 }
+
+		hwPerfControllerSMBV1ID OBJECT-TYPE
+			SYNTAX OCTET STRING
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfControllerSMBV1Entry 1 }
+
+
+		hwPerfControllerSMBV1OPS OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfControllerSMBV1Entry 2 }
+
+
+		hwPerfControllerSMBV1Bps OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfControllerSMBV1Entry 3 }
+
+
+		hwPerfControllerSMBV2Table OBJECT-TYPE
+			SYNTAX SEQUENCE OF HwPerfControllerSMBV2Entry
+			MAX-ACCESS not-accessible
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerformance 13 }
+
+
+		hwPerfControllerSMBV2Entry OBJECT-TYPE
+			SYNTAX HwPerfControllerSMBV2Entry
+			MAX-ACCESS not-accessible
+			STATUS current
+			DESCRIPTION
+				"Description."
+			INDEX { hwPerfControllerSMBV2ID }
+			::= { hwPerfControllerSMBV2Table 1 }
+
+
+		HwPerfControllerSMBV2Entry ::=
+			SEQUENCE {
+				hwPerfControllerSMBV2ID
+					OCTET STRING,
+				hwPerfControllerSMBV2OPS
+					Counter64,
+				hwPerfControllerSMBV2Bps
+					Counter64
+			 }
+
+		hwPerfControllerSMBV2ID OBJECT-TYPE
+			SYNTAX OCTET STRING
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfControllerSMBV2Entry 1 }
+
+
+		hwPerfControllerSMBV2OPS OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfControllerSMBV2Entry 2 }
+
+
+		hwPerfControllerSMBV2Bps OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfControllerSMBV2Entry 3 }
+
+
+		hwPerfFileSystemTable OBJECT-TYPE
+			SYNTAX SEQUENCE OF HwPerfFileSystemEntry
+			MAX-ACCESS not-accessible
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerformance 14 }
+
+
+		hwPerfFileSystemEntry OBJECT-TYPE
+			SYNTAX HwPerfFileSystemEntry
+			MAX-ACCESS not-accessible
+			STATUS current
+			DESCRIPTION
+				"Description."
+			INDEX { hwPerfFileSystemID }
+			::= { hwPerfFileSystemTable 1 }
+
+
+		HwPerfFileSystemEntry ::=
+			SEQUENCE {
+				hwPerfFileSystemID
+					OCTET STRING,
+				hwPerfFileSystemOPS
+					Counter64,
+				hwPerfFileSystemServiceTime
+					Counter64,
+				hwPerfFileSystemReadOPS
+					Counter64,
+				hwPerfFileSystemReadBandwidth
+					Counter64,
+				hwPerfFileSystemAvRdOPSRspTime
+					Counter64,
+				hwPerfFileSystemAvWrOPSRspTime
+					Counter64,
+				hwPerfFileSystemWriteOPS
+					Counter64,
+				hwPerfFileSystemWriteBandwidth
+					Counter64
+			 }
+
+		hwPerfFileSystemID OBJECT-TYPE
+			SYNTAX OCTET STRING
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfFileSystemEntry 1 }
+
+
+		hwPerfFileSystemOPS OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfFileSystemEntry 2 }
+
+
+		hwPerfFileSystemServiceTime OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfFileSystemEntry 3 }
+
+
+		hwPerfFileSystemReadOPS OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfFileSystemEntry 4 }
+
+
+		hwPerfFileSystemReadBandwidth OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfFileSystemEntry 5 }
+
+
+		hwPerfFileSystemAvRdOPSRspTime OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfFileSystemEntry 6 }
+
+
+		hwPerfFileSystemAvWrOPSRspTime OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfFileSystemEntry 7 }
+
+
+		hwPerfFileSystemWriteOPS OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfFileSystemEntry 8 }
+
+
+		hwPerfFileSystemWriteBandwidth OBJECT-TYPE
+			SYNTAX Counter64
+			MAX-ACCESS read-only
+			STATUS current
+			DESCRIPTION
+				" "
+			::= { hwPerfFileSystemEntry 9 }
+
 		
 --  1.6
 		-- 1.6
@@ -869,6 +1215,11 @@
 				hwPerfPortLocation, hwPerfNodeAverageIOResponseTime, hwPerfNodeMaxIOResponseTime, hwPerfNodeAverageReadIOLatency, hwPerfNodeAverageWriteIOLatency, 
 				hwPerfLunAverageIOResponseTime, hwPerfLunMaxIOResponseTime, hwPerfLunAverageReadIOLatency, hwPerfLunAverageWriteIOLatency, hwPerfPortAverageIOResponseTime, 
 				hwPerfPortMaxIOResponseTime, hwPerfPortAverageReadIOLatency, hwPerfPortAverageWriteIOLatency, hwPerfPortMaxIOPS, hwPerformanceSwitch, 
+				hwPerfControllerNFSV3ID, hwPerfControllerNFSV4ID, hwPerfControllerSMBV1ID, hwPerfControllerSMBV2ID,
+				hwPerfNodeFileBandwidth, hwPerfNodeFileOPS, hwPerfControllerNFSV3Bps, hwPerfControllerNFSV3OPS,
+				hwPerfControllerNFSV4OPS, hwPerfControllerNFSV4Bps, hwPerfControllerSMBV1OPS, hwPerfControllerSMBV2OPS, hwPerfControllerSMBV2Bps,
+				hwPerfFileSystemOPS, hwPerfFileSystemServiceTime, hwPerfFileSystemReadOPS, hwPerfFileSystemReadBandwidth, hwPerfFileSystemWriteOPS,
+				hwPerfFileSystemWriteBandwidth,
 				hwPerfNodeIfIndex }
 			STATUS current
 			DESCRIPTION 
